@@ -1097,6 +1097,13 @@ body {
   font-family: var(--third-family);
   font-size: 32px;
   color: #000;
+  transition: filter 200ms ease;
+}
+.footer__btn:hover {
+  filter: brightness(0.8);
+}
+.footer__btn:active {
+  filter: brightness(1);
 }
 @media screen and (max-width: 1279px) {
   .footer__btn {

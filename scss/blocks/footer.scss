@@ -68,6 +68,14 @@
   font-family: var(--third-family);
   font-size: 32px;
   color: #000;
+  transition: filter 200ms ease;
+
+  &:hover {
+    filter: brightness(0.8);
+  }
+  &:active {
+    filter: brightness(1);
+  }
 
   @media screen and (max-width: 1279px) {
     margin-top: 16px;
