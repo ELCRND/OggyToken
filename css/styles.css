@@ -334,15 +334,20 @@ body {
 }
 @media screen and (max-width: 768px) {
   .home {
-    min-height: 770px;
+    min-height: 780px;
   }
 }
 @media screen and (max-width: 530px) {
   .home {
     background-size: 100%;
-    background-position: 0 44px;
+    background-position: 0 10px;
     background-repeat: no-repeat;
   }
+}
+
+.home__title {
+  position: absolute;
+  z-index: -1;
 }
 
 .home__btn {
