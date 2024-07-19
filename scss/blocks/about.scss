@@ -121,6 +121,10 @@
 
   &:hover {
     border-width: 12px;
+
+    @media screen and (max-width: 1279px) {
+      border-width: 6px;
+    }
   }
 
   &:active {
@@ -155,6 +159,10 @@
 
   &:hover {
     border-width: 12px;
+
+    @media screen and (max-width: 1279px) {
+      border-width: 6px;
+    }
   }
 
   &:active {
@@ -170,6 +178,10 @@
 
   &:hover {
     border-width: 10px;
+
+    @media screen and (max-width: 1279px) {
+      border-width: 5px;
+    }
   }
 
   &:active {

@@ -560,6 +560,11 @@ body {
 .about__btn:hover {
   border-width: 12px;
 }
+@media screen and (max-width: 1279px) {
+  .about__btn:hover {
+    border-width: 6px;
+  }
+}
 .about__btn:active {
   background-color: #fff;
   border-color: #000;
@@ -591,6 +596,11 @@ body {
 .about__download:hover {
   border-width: 12px;
 }
+@media screen and (max-width: 1279px) {
+  .about__download:hover {
+    border-width: 6px;
+  }
+}
 .about__download:active {
   background-color: #fff;
   border-color: #000;
@@ -603,6 +613,11 @@ body {
 }
 .about__download.disabled:hover {
   border-width: 10px;
+}
+@media screen and (max-width: 1279px) {
+  .about__download.disabled:hover {
+    border-width: 5px;
+  }
 }
 .about__download.disabled:active {
   background-color: #000;
