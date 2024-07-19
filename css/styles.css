@@ -491,7 +491,7 @@ body {
 }
 @media screen and (max-width: 1279px) {
   .about__title {
-    margin-bottom: 21px;
+    margin-bottom: 0;
     font-size: 54px;
     text-align: center;
   }
@@ -755,6 +755,7 @@ body {
     padding-left: 0;
     gap: 50px;
     font-size: 23px;
+    text-align: center;
   }
 }
 
@@ -832,6 +833,7 @@ body {
   .buy {
     padding-top: 70px;
     padding-bottom: 210px;
+    background-position: -490px 0;
   }
 }
 .buy::before {
@@ -938,7 +940,11 @@ body {
   color: #d80000;
   z-index: 1;
   position: relative;
-  translate: 0 8%;
+}
+@media screen and (max-width: 1279px) {
+  .steps__item span:first-of-type {
+    translate: 0 4%;
+  }
 }
 .steps__item span:first-of-type::before {
   content: "1";

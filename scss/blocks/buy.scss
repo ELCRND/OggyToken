@@ -12,6 +12,7 @@
   @media screen and (max-width: 1279px) {
     padding-top: 70px;
     padding-bottom: 210px;
+    background-position: -490px 0;
   }
 
   &::before {
@@ -125,7 +126,10 @@
     color: #d80000;
     z-index: 1;
     position: relative;
-    translate: 0 8%;
+
+    @media screen and (max-width: 1279px) {
+      translate: 0 4%;
+    }
 
     &::before {
       content: "1";
