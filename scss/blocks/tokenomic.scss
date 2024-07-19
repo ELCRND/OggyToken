@@ -1,138 +1,134 @@
 .tokenomic {
-  padding-top: 175px;
+  padding-top: 190px;
+  padding-bottom: 426px;
+  background-image: url("../public/img/tokenomic/tokenomic_bg.png");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
 
   @media screen and (max-width: 1279px) {
-    padding-top: 40px;
+    padding-top: 55px;
+    padding-bottom: 146px;
+  }
+
+  &::before {
+    content: url("../public/img/tokenomic/tokenomic_bg_layer_front.png");
+    position: absolute;
+    top: 35px;
+    left: 50%;
+    translate: -50% 0;
+    mix-blend-mode: soft-light;
+    z-index: -1;
+
+    @media screen and (max-width: 1279px) {
+      content: url("../public/img/tokenomic/tokenomic_bg_layer_front_mobile.png");
+      top: 14px;
+    }
   }
 }
 
 .tokenomic__container {
-  width: min(1380px, 100%);
+  width: min(1326px, 100%);
   margin-left: auto;
   margin-right: auto;
-  padding-left: 50px;
-  padding-right: 50px;
-}
-
-.tokenomic__wrap {
-  display: flex;
-  flex-direction: column-reverse;
-  gap: 16px;
+  padding-left: 23px;
+  padding-right: 23px;
+  position: relative;
 
   @media screen and (max-width: 1279px) {
-    width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-    gap: 7px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
   }
 }
 
 .tokenomic__title {
-  margin-bottom: 150px;
-  font-weight: 700;
-  font-size: 80px;
-  line-height: 93%;
+  margin-bottom: 58px;
+  font-family: var(--font3);
+  font-weight: 400;
+  font-size: 124px;
   text-transform: uppercase;
-  color: var(--red);
-  text-shadow: 0 5px 5px rgba(0, 0, 0, 0.25);
+  color: #81c29b;
 
   @media screen and (max-width: 1279px) {
-    margin-bottom: 98px;
-    font-size: 43px;
-  }
-}
-
-.tokenomic__subtitle {
-  font-family: var(--second-family);
-  font-weight: 600;
-  font-size: 18px;
-  color: #fff;
-
-  @media screen and (max-width: 1279px) {
+    margin-bottom: 50px;
     text-align: center;
+    font-size: 47px;
   }
 }
 
 .tokenomic__statistics {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 30px;
-
-  @media screen and (max-width: 1279px) {
-    width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-.statistics__item {
-  width: 100%;
-  height: 104px;
-  padding-left: 33px;
+  padding-left: 80px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  position: relative;
-
-  @media screen and (max-width: 1279px) {
-    height: 80px;
-    padding-left: 22px;
-    padding-right: 22px;
-    align-items: center;
-  }
-
-  &:nth-of-type(2) {
-    grid-row: 2 / 3;
-    grid-column: 2 / 3;
-  }
-  &:nth-of-type(3) {
-    grid-row: 1 / 2;
-    grid-column: 3 / 4;
-  }
-
-  &::before {
-    content: url("../public/img/tokenomic/tokenomic_decoration_1.png");
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  &::after {
-    content: url("../public/img/tokenomic/tokenomic_decoration_2.png");
-    position: absolute;
-    bottom: 0;
-    right: 0;
-  }
-}
-
-.statistics__title {
+  gap: 78px;
   font-family: var(--second-family);
-  font-weight: 800;
-  font-size: 33px;
-  text-transform: uppercase;
-  background: linear-gradient(113deg, #fff 0%, #999 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-  .tokenomic__accent-color {
-    color: var(--red);
-    -webkit-text-fill-color: var(--red);
-  }
-
-  @media screen and (max-width: 1279px) {
-    font-size: 22px;
-  }
-}
-
-.statistics__subtitle {
-  font-family: var(--second-family);
-  font-weight: 600;
-  font-size: 18px;
+  font-weight: 400;
+  font-size: 36px;
   color: #fff;
 
   @media screen and (max-width: 1279px) {
-    font-size: 12px;
+    padding-left: 0;
+    gap: 50px;
+    font-size: 23px;
+  }
+}
+
+.statistics__num {
+  font-size: 56px;
+
+  @media screen and (max-width: 1279px) {
+    font-size: 35px;
+  }
+}
+
+.tokenomic__img {
+  position: absolute;
+  top: 76px;
+  right: 0;
+
+  @media screen and (max-width: 1279px) {
+    position: relative;
+    top: 0;
+  }
+}
+
+.tokenomic__ticker {
+  width: 100%;
+  height: 80px;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+
+  @media screen and (max-width: 1279px) {
+    height: 64px;
+  }
+
+  .ticker__wrap {
+    display: flex;
+    align-items: center;
+    gap: 124px;
+    animation: tickerMove 60s linear infinite;
+
+    @media screen and (max-width: 1279px) {
+      gap: 100px;
+    }
+
+    span {
+      font-size: 32px;
+      line-height: 100%;
+      color: #000;
+
+      @media screen and (max-width: 1279px) {
+        font-size: 25px;
+      }
+    }
   }
 }
