@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Fondamento:ital@0;1&family=Kulim+Park:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600;1,700&family=Manrope:wght@200..800&display=swap");
+@font-face {
+  src: url("../public/fonts/Roaches-Regular.otf");
+  font-family: "Roaches";
+}
+
+:root {
+  --font-family: "Kulim Park", sans-serif;
+  --second-family: "Roaches", sans-serif;
+  --third-family: "Manrope", sans-serif;
+  --font3: "Fondamento", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 375px;
+  font-family: var(--font-family);
+  background-color: #fff;
+  color: #000;
+}
+
+.scroll-off {
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+.tooltip {
+  padding: 12px 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 24px;
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  translate: -50% 0;
+  opacity: 0;
+  display: none;
+  transition: all 400ms ease;
+  z-index: 21;
+  color: #fff;
+}
+
+.tooltip.visible {
+  display: block;
+  animation: tooltip-show 400ms linear forwards;
+}
+
+@keyframes tooltip-show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

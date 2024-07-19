@@ -1,0 +1,135 @@
+.header {
+  width: 100%;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  z-index: 10;
+
+  @media screen and (max-width: 1279px) {
+    top: 0;
+  }
+}
+
+.header__container {
+  width: min(1306px, 100%);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header__top {
+  width: 100%;
+  height: 44px;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: #000;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: -0.01em;
+  color: #fff;
+  display: none;
+
+  @media screen and (max-width: 1279px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.header__bottom {
+  display: flex;
+  align-items: center;
+
+  @media screen and (max-width: 1279px) {
+    margin-top: 18px;
+    justify-content: flex-end;
+  }
+}
+
+.header__navigation {
+  @media screen and (max-width: 1279px) {
+    display: none;
+  }
+}
+
+.navigation__list {
+  display: flex;
+  align-items: center;
+  gap: 66px;
+  font-size: 60px;
+  text-transform: uppercase;
+  color: #000;
+
+  .navigation__link {
+    transition: color 200ms ease;
+    &:hover {
+      color: #0050b9;
+    }
+  }
+}
+
+.header__menu {
+  width: 100%;
+  height: 110vh;
+  padding-top: 140px;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  translate: 0 -100%;
+  z-index: 20;
+  visibility: hidden;
+  background-color: #fe910c;
+  transition: all 600ms ease-in-out;
+}
+
+.header__menu.visible {
+  translate: 0 -14px;
+  visibility: visible;
+}
+.menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  font-family: var(--third-family);
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.header__menu-btn {
+  margin-left: auto;
+  margin-right: 15px;
+  display: none;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+  z-index: 21;
+
+  @media screen and (max-width: 1279px) {
+    display: flex;
+  }
+
+  div {
+    width: 64px;
+    height: 2px;
+    background-color: #000;
+    border-radius: 20px;
+    transition: all 200ms ease;
+  }
+}
+
+.header__menu-btn.close {
+  div {
+    &:first-of-type {
+      rotate: 45deg;
+      translate: 4px 9px;
+    }
+    &:nth-of-type(2) {
+      display: none;
+    }
+    &:last-of-type {
+      rotate: -45deg;
+      translate: 4px -9px;
+    }
+  }
+}
